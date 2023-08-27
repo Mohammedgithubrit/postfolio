@@ -12,12 +12,12 @@ document.querySelectorAll("img")[1].setAttribute("src",secondDiceImageSource);
 
 if (firstRandomNum > secondRandomNum) {
 
-    var must =document.querySelector("h1").innerText="SALMA CHABROS";
+    var must =document.querySelector("h1").innerText="PLAYER 1 WINS ✨";
  
 
 } else if(secondRandomNum > firstRandomNum) {
     
-    document.querySelector('h1').innerHTML=' SMIGU WINS✨';
+    document.querySelector('h1').innerHTML=' PLAYER 2 WINS✨';
 }else{
     document.querySelector('h1').innerHTML= 'Draw'
 }
