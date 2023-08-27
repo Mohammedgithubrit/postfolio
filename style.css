@@ -1,0 +1,38 @@
+body{
+    background: linear-gradient( To left bottom, #fff,#0000FE, #e95608,  #ffea00, #010255);
+}
+.container{
+    font-size: 3rem;
+    /* font-weight: bold; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+    color: #ffff;
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: 10px;
+    text-shadow:5px 2px 5px  #15db46;
+}
+    .m1,.m2{
+        width: 20rem;
+        height: 20rem;
+        text-align: center;   
+}
+    
+p{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    margin:50px ;
+    text-transform: uppercase;
+}
+.yusuf,.mdy{
+    position: relative;
+    left: 280px;
+}
+.mdy{
+    position: relative;
+    left: 500px;
+    bottom: 465px;
+}
+
