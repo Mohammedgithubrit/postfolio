@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body{
+font-family: 'Poppins', sans-serif, Arial, Helvetica;
+background-color: #000000;
+}
+
+.container{
+    background-image: url(./images/pexels-tyler-lastovich-2086917.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    padding: 20px 10%;
+
+}
+
+/* header{
+color: #fff;
+padding: 10px 0;
+width: 100%;
+height: 100vh;
+}    */
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li {
+     display: inline-block;
+     list-style: none;
+     margin: 10px 20px
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size:18px;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 15%;
+    font-size: 30px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+
+}
+
+.header-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.header-text h1{
+    font-size: 60px;
+    margin-left:  60px;
+    color: #fff;  
+    font-weight: bold;
+}
+.header-text h1 span{
+    color:#ff004f;
+    font-weight: bold;
+}
+.header-text p{
+    font-size: 40px;
+    margin-left:  60px;
+    margin-top:10px;
+    color:#fff;
+    font-weight: bold;
+} 
+
+--------------about---------------------
+#about{
+    padding: 80px;
+    color:#fff
+}
+.container-2{
+    padding: 60px 10%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+    color:#fff
+
+}
+
+.about-col-1{
+    flex-basis: 35%;
+    color:#fff
+
+}
+
+.about-col-1 img{
+    width:100%;
+    border-radius:15px;
+    color:#fff
+
+}
+
+.about-col-2{
+    flex-basis: 60%;
+    color:#fff
+
+}
+.sub-title-1{
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color:#ff004f;
+
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+    color:#fff
+
+}
+.tab-links{
+    margin-right:50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color:#fff
+
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.tab-links.active-link:hover::after{
+    width: 100%;
+}
+
+.tab-content ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span {
+    color: #b54769;
+    font-size:14px;
+
+}
+.tab-contents{
+    display:none;
+}
+.active-tab{
+    display: block;
+}
+
+---------------services----------------
+
+#service{
+    padding: 50px ;
+   
+
+}
+
+.service-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 70px;
+    margin:70px;
+    color: #fff;
+}
+.sub-title{
+    margin-left: 90px;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    color: #ff004f;
+}
+.service-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:background 0.5s, transform 0.5s;
+}
+.service-list i {
+    font-size: 50px;
+    margin-bottom:30px;
+}
+
+.service-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.service-list div a{
+    text-decoration: none;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 12px;
+    display: inline-block;
+}
+.service-list div:hover{
+    background:#ff004f;
+    transform: translateY(-10px);
+}
+
+---------------p-------------
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 70px;
+    margin:70px;
+    cursor: pointer;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+   width: 100%; 
+   border-radius: 10px;
+   display: block;
+   transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff044f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    color: #fff;
+    transition: height 0.7s;
+}
+.layer h3{
+    font-weight:500 ;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top:20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+
+
+
+
+
+.container-5{
+    background-color: #221e1e;
+}
+.contact-info ul  {
+    margin: 60px 250px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.contact-info ul li{
+    padding: 5px;
+    text-decoration: none;
+}
+
+.contact-form{
+  margin: 70px 0;
+}
+.form-control {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 30px;
+        border: #fff;
+        outline: none;
+        border-radius: 5px;
+    }
+    .btn{
+    margin-top: 10px;
+    background-color: #df4c1f;
+    color: #fff;
+    padding: 10px 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    .btn:hover{
+        background-color: #000000;
+    }
