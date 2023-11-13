@@ -12,14 +12,15 @@
         <nav>
             
             <div class="Logo">Mutex</div>
-            <ul>
+            <ul id="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">portfolio</a></li>
                 <li ><a href="#contact">Contact</a></li>
-               
+                <img src="./images/cross.png" class="menu-image" onclick="closemenu()" width="20px" alt="">
             </ul>
+            <img src="./images/menu.png" class="menu-image" onclick="openmenu()" width="40px" alt="">
         </nav>
   
 
@@ -28,15 +29,16 @@
         <h1>Hi, I'm <span>Mohammed</span>  </h1>
         <p>I am a Web Developer</p>
 </div>
-</section>
 </div>
 </div>  
+</section>
+
 
 <div id="About">
     <div class="container-2">
         <div class="row">
             <div class="about-col-1">
-                <img src="./images/user.jpg"   alt="">
+                <img src="./images/user.jpg"   alt="kjlkjl">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title-1">About Me</h1>
@@ -68,7 +70,6 @@
                         <li><span>Lorem ipsum dolor sit.</span><br>Lorem, ipsum dolor.</li>
                     </ul>
                 </div>
-
             </div>
 
         </div>
@@ -144,7 +145,7 @@
               
               <li>
                 <img src="./images/envelope.png" alt="" width="40px" height="40px">
-                <a href="mailto:yusufmd2255@gmail.com">youremail@example.com</a>
+                <a href="mailto:yusufmd2255@gmail.com">yusufmd2255@gmail.com</a>
               </li>
               
               <li><img src="./images/phone-call.png" alt="" width="40px" height="40px"> (123) 07057917327 </li>
@@ -184,20 +185,14 @@
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.querySelector('.header-text').classList.add('show');
-            }, 50); // Adjust the delay time (in milliseconds) as needed
+               
+            }, 1000); // Adjust the delay time (in milliseconds) as needed
         });
 
 let tablinks = document.querySelectorAll(".tab-links");
 let tabcontents = document.querySelectorAll(".tab-contents ");
 function opentab(tabname){
-    // for(tablink of tablinks){
-    //     taablink.classList.remove("active-link");
-    // }
-    // for(tabcontent of tabcontents){
-    //     tabcontent.classList.remove("active-tab");
-    // }
-    // event.currentTarget.classList.add("active-link");
-    // document.getElementById(tabname).classList.add("active-tab");
+    
     tablinks.forEach((tablink) => {
     tablink.classList.remove("active-link");
   });
@@ -207,12 +202,22 @@ function opentab(tabname){
     tabcontent.classList.remove("active-tab");
   });
 
-  // Add the "active-link" class to the clicked tab link
-  document.querySelector(`[onclick="opentab('${tabname}')"]`).classList.add("active-link");
+//   // Add the "active-link" class to the clicked tab link
+   document.querySelector(`[onclick="opentab('${tabname}')"]`).classList.add("active-link");
 
-  // Show the corresponding tab content
-  document.getElementById(tabname).classList.add("active-tab");
+//   // Show the corresponding tab content
+ document.getElementById(tabname).classList.add("active-tab");
+ 
 }
+
+let sideMenu = document.getElementById("menu");
+
+    function openmenu () {
+    sideMenu.style.right ="0";
+};
+    function closemenu () {
+    sideMenu.style.right ="-150px";
+};
 </script>
 </body>
 </html>
